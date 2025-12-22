@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Hut</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Header Section -->
+<header class="header">
+
+    <!-- Logo Area: Image + Text -->
+    <div class="logo-area">
+        <img class="logo-img" src="Pizza-Hut-Logo.jpg" alt="Pizza Hut Logo">
+        <div class="logo">Pizza<span>Hut</span></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="deals.html">Deals</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
+        <a href="order.html">Order</a>
+    </nav>
+
+    <!-- Order Button -->
+ <div class="nav-actions">
+    <a href="#" class="cart-btn">Add to Cart</a>
+    <a href="#" class="logout-btn" onclick="logout()">Logout</a>
+</div>
+    <!-- Mobile Menu Icon -->
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+</header>
+<!---Hero Section-->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hot & Fresh Meal Delivered Fast!</h1>
+        <p>Craving something delicious? Order your favorite meal and get it at your doorstep in just 30 minutes.</p>
+
+        <div class="hero-buttons">
+            <a href="order.html" class="btn order">Order Now</a>
+            <a href="menu.html" class="btn menu">View Menu</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="Pizza-Hut-Melts-Burger.jpg" alt="Pizza Image"/>
+    </div>
+</section>
+
+<!---Featured Section--->
+
+<section class="featured">
+    <h2 class="section-title">Our Best Sellers</h2>
+
+    <div class="pizza-container">
+
+        <div class="pizza-card">
+            <img src="pepperoni-pizza.jpg" alt="Pepperoni Pizza">
+            <h3>Pepperoni Pizza</h3>
+            <p>Loaded with extra cheese & spicy pepperoni.</p>
+            <div class="price">৳ 950 BDT</div>
+            <a href="#" class="add-btn">Add to Cart</a>
+        </div>
+
+        <div class="pizza-card">
+            <img src="veggie-pizza.jpg" alt="Veggie Delight">
+            <h3>Veggie Delight</h3>
+            <p>Fresh vegetables on a cheesy crust.</p>
+            <div class="price">৳ 665 BDT</div>
+            <a href="#" class="add-btn">Add to Cart</a>
+        </div>
+
+        <div class="pizza-card">
+            <img src="bbq-chicken-pizza.png" alt="BBQ Chicken Pizza">
+            <h3>BBQ Chicken Pizza</h3>
+            <p>Smoky BBQ flavor with grilled chicken.</p>
+            <div class="price">৳ 850 BDT</div>
+            <a href="#" class="add-btn">Add to Cart</a>
+        </div>
+       <div class="pizza-card">
+                <img src="hamburger.jpg" alt="">
+                <h3>Classic Hamburger</h3>
+                <p>Smoky bacon meets succulent beef—irresistible.</p>
+               <div class="price">৳ 450 BDT</div>
+               <a href="#" class="add-btn">Add to Cart</a>
+            </div>
+        <div class="pizza-card">
+                <img src="Melts-Burger-.jpg" alt="">
+                <h3>Melts-Burger</h3>
+                <p>Crispy outside, juicy inside—burger perfection.</p>
+               <div class="price">৳ 400 BDT</div>
+               <a href="#" class="add-btn">Add to Cart</a>
+            </div>
+         <div class="pizza-card">
+                <img src="cheesy-garlic-bread-1.jpg" alt="">
+                <h3>Garlic Bread</h3>
+                <p>Fresh garlic bread with cheese.</p>
+               <div class="price">৳ 200 BDT</div>
+               <a href="#" class="add-btn">Add to Cart</a>
+            </div>
+    </div>
+</section>
+<!---Feture Section End--->
+
+<!--Deals & Offers Section-->
+<section class="deals">
+    <h2 class="deals-title">Exclusive Deals & Offers</h2>
+
+    <div class="deals-container">
+
+        <div class="deal-card">
+            <h3>Buy 1 Get 1 Free</h3>
+            <p>Order any medium pizza & get another one absolutely free!</p>
+            <a href="#" class="deal-btn">Grab Offer</a>
+        </div>
+
+        <div class="deal-card">
+            <h3>30% Off on Large Pizza</h3>
+            <p>Get massive savings on our large-sized pizzas.</p>
+            <a href="#" class="deal-btn">Order Now</a>
+        </div>
+
+        <div class="deal-card">
+            <h3>Family Combo Meal</h3>
+            <p>2 Large Pizzas + Drinks + Garlic Bread at a special price.</p>
+            <a href="#" class="deal-btn">Get Combo</a>
+        </div>
+
+    </div>
+</section>
+<!--Deals & Offers Section End-->
+
+<!--Why Choose us Section--->
+<section class="why-us">
+    <h2 class="why-title">Why Choose Us</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="icon">🔥</div>
+            <h3>Fresh Ingredients</h3>
+            <p>We use hand-picked, high-quality ingredients for every pizza.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">⏱️</div>
+            <h3>Fast Delivery</h3>
+            <p>Get your pizza delivered hot & fresh in under 30 minutes.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">⭐</div>
+            <h3>Top Quality Taste</h3>
+            <p>Experience premium taste crafted with perfection.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">💳</div>
+            <h3>Secure Payments</h3>
+            <p>Your online transactions are safe and protected.</p>
+        </div>
+
+    </div>
+</section>
+
+<!---Why Choose Us End--->
+
+<!--Customer Reviews (Testimonials Section) Start-->
+
+<section class="testimonials">
+    <h2 class="test-title">What Our Customers Say</h2>
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+            <img src="https://i.ibb.co/3fzxR6j/user1.jpg" class="review-img" alt="User 1">
+            <h3>Sabrin Alom</h3>
+            <div class="stars">★★★★★</div>
+            <p>"Absolutely the best food in town! Fast delivery and the crust is always perfect."</p>
+        </div>
+
+        <div class="review-card">
+            <img src="https://i.ibb.co/mN6MP36/user2.jpg" class="review-img" alt="User 2">
+            <h3>Isita Akter</h3>
+            <div class="stars">★★★★★</div>
+            <p>"Great taste, fresh toppings, and amazing deals. My go-to Friday night dinner!"</p>
+        </div>
+
+        <div class="review-card">
+            <img src="https://i.ibb.co/ZxMqqqM/user3.jpg" class="review-img" alt="User 3">
+            <h3>Iffat Zakiha</h3>
+            <div class="stars">★★★★☆</div>
+            <p>"Love the veggie pizza & Garlic Bread! Always hot and delicious. Highly recommended."</p>
+        </div>
+
+    </div>
+</section>
+
+<!--Customer Reviews (Testimonials Section) End-->
+
+<!-- Download App Section -->
+<section class="download-app">
+    <div class="download-content">
+        <h2>Download the Pizza Hut App</h2>
+        <p>Order your favorite food anytime, get exclusive deals, and track your delivery — all in one app.</p>
+
+        <div class="app-buttons">
+            <a href="#" class="store-btn">
+                <img src="playstore.jpg" alt="Google Play">
+            </a>
+            <a href="#" class="store-btn">
+                <img src="app store.png" alt="App Store">
+            </a>
+        </div>
+    </div>
+
+    <div class="download-image">
+        <img src="pizzahut-app-logo.png" alt="Pizza Hut App Mockup">
+    </div>
+</section>
+
+<!--Download app Section End -->
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3 class="footer-logo">Pizza<span>Hut</span></h3>
+            <p>Delicious pizza delivered hot and fresh to your door. Taste the best, anytime!</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="deals.html">Deals</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="#">Track Order</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Pizza Hut. All Rights Reserved.</p>
+    </div>
+</footer>
+<!--Footer End-->
+
+<script>
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.querySelector(".navbar");
+
+    menuIcon.onclick = () => {
+        navbar.classList.toggle("active");
+    };
+</script>
+<script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+<script src="script.js"></script>
+</body>
+</html> 
