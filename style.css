@@ -1,0 +1,779 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background:#121212;
+    color: #fff;
+}
+
+/* HEADER Section */
+.header {
+    width: 100%;
+    padding: 18px 5%;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* LOGO AREA */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between image and text */
+}
+
+/* LOGO IMAGE */
+.logo-img {
+    width: 90px;
+    height: 90px;        /* Important for perfect circle */
+    border-radius: 50%;  /* Makes the image round */
+    object-fit: cover;   /* Keeps the image inside circle without stretching (Change is here) */
+}
+
+/* LOGO TEXT */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.logo span {
+    color: #e60023; /* Pizza Hut red */
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e60023;
+}
+/* Add the extra button css*/
+/* NAV ACTION BUTTONS (Add to Cart + Logout) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ADD TO CART BUTTON */
+.cart-btn {
+    background: #e60023;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background: #ff0033;
+}
+@media (max-width: 768px) {
+    .nav-actions {
+        display: none;
+    }
+}
+/* Add the extra button css*/
+/* LOGOUT BUTTON */
+.logout-btn {
+    background: transparent;
+    padding: 10px 20px;
+    color: #e60023;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid #e60023;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #e60023;
+    color: #fff;
+}
+
+/* MOBILE MENU ICON */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        background: #1a1a1a;
+        width: 200px;
+        flex-direction: column;
+        text-align: right;
+        padding: 20px;
+        gap: 20px;
+        transition: 0.4s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .order-btn {
+        display: none;
+    }
+
+    /* Optional: shrink logo image on mobile */
+  .logo-img {
+    width: 90px;
+}
+
+
+    .logo {
+        font-size: 22px;
+    }
+}
+
+
+/* --------------------------------------- */
+/* HERO SECTION */
+/* --------------------------------------- */
+.hero {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+    background:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("background-image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* LEFT CONTENT */
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #cccccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Primary Order Button */
+.btn.order {
+    background: #e60023;
+    color: white;
+}
+.btn.order:hover {
+    background: #ff0033;
+}
+
+/* Secondary Menu Button */
+.btn.menu {
+    background: transparent;
+    border: 2px solid #e60023;
+    color: #e60023;
+}
+.btn.menu:hover {
+    background: #e60023;
+    color: white;
+}
+
+/* RIGHT SIDE IMAGE */
+.hero-image img {
+    width: 400px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* HERO RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+/* FEATURED PIZZAS SECTION */
+.featured {
+    width: 100%;
+    padding: 80px 5%;
+    background: #121212;
+    color: white;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* CARD CONTAINER */
+.pizza-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* PIZZA CARD */
+.pizza-card {
+    background: #1a1a1a;
+    width: 30%;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Card Hover Effect */
+.pizza-card:hover {
+    transform: translateY(-8px);
+    border-color: #e60023;
+    box-shadow: 0 0 25px rgba(230, 0, 35, 0.3);
+}
+
+/* Card Image */
+.pizza-card img {
+    width: 200px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+/* Image hover animation */
+.pizza-card:hover img {
+    transform: scale(1.1);
+}
+
+.pizza-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.pizza-card p {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e60023;
+    margin-bottom: 20px;
+}
+
+/* Add to Cart Button */
+.add-btn {
+    background: #e60023;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #ff0033;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .pizza-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .pizza-card {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
+/* DEALS & OFFERS SECTION */
+.deals {
+    padding: 80px 5%;
+    background: #121212;
+    text-align: center;
+    color: white;
+}
+
+.deals-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Deals Container */
+.deals-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Deal Card */
+.deal-card {
+    background: #1a1a1a;
+    width: 30%;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover animation */
+.deal-card:hover {
+    border-color: #e60023;
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(230, 0, 35, 0.25);
+}
+
+/* Card texts */
+.deal-card h3 {
+    font-size: 28px;
+    color: #e60023;
+    margin-bottom: 15px;
+}
+
+.deal-card p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Button */
+.deal-btn {
+    background: #e60023;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.deal-btn:hover {
+    background: #ff0033;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .deal-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .deal-card {
+        width: 100%;
+    }
+
+    .deals-title {
+        font-size: 32px;
+    }
+}
+
+/* WHY CHOOSE US SECTION */
+.why-us {
+    padding: 80px 5%;
+    background: #121212;
+    text-align: center;
+    color: white;
+}
+
+.why-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Container */
+.why-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Feature Card */
+.why-card {
+    background: #1a1a1a;
+    padding: 35px 25px;
+    width: 22%;
+    border-radius: 14px;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+/* Hover Effect */
+.why-card:hover {
+    transform: translateY(-10px);
+    border-color: #e60023;
+    box-shadow: 0 0 25px rgba(230, 0, 35, 0.25);
+}
+
+/* Icons */
+.why-card .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #e60023;
+}
+
+.why-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.why-card p {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .why-card {
+        width: 45%;
+    }
+
+    .why-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-card {
+        width: 100%;
+    }
+}
+/* TESTIMONIALS SECTION */
+.testimonials {
+    padding: 80px 5%;
+    background: #121212;
+    text-align: center;
+    color: white;
+}
+
+.test-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Reviews Container */
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Review Card */
+.review-card {
+    background: #1a1a1a;
+    width: 30%;
+    padding: 35px 25px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* Hover effect */
+.review-card:hover {
+    transform: translateY(-10px);
+    border-color: #e60023;
+    box-shadow: 0 0 25px rgba(230, 0, 35, 0.25);
+}
+
+/* Customer Image */
+.review-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #e60023;
+}
+
+/* Name & Stars */
+.review-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.stars {
+    color: #e60023;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Review Text */
+.review-card p {
+    font-size: 15px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .review-card {
+        width: 45%;
+    }
+
+    .test-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .review-card {
+        width: 100%;
+    }
+}
+
+/* Download App Section */
+.download-app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    background: #111;
+    color: #fff;
+    gap: 40px;
+}
+
+.download-content h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.download-content p {
+    font-size: 20px;
+    color: #cccccc;
+    max-width: 450px;
+    margin-bottom: 25px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.store-btn img {
+    width: 40px;
+    transition: 0.3s ease;
+}
+
+.store-btn img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+.download-image img {
+    width: 150px;
+    /* Forces the image element into a perfect circle */
+    border-radius: 50%;
+    /* Applies the specified drop shadow */
+    filter: drop-shadow(0 0 20px #ff00003d);
+}/* Here app code change */
+
+/* Responsive */
+@media (max-width: 900px) {
+    .download-app {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .download-image img {
+        width: 220px;
+        margin-top: 20px;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background: #0d0d0d;
+    padding: 60px 5% 20px;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #ff2c2c;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ff2c2c;
+}
+
+.footer-col p {
+    color: #cccccc;
+    max-width: 300px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #d3d3d3;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ff2c2c;
+}
+
+/* Social Links */
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff2c2c;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+    }
+}
