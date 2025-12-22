@@ -58,7 +58,7 @@ Each team member contributed code through commits, which can be viewed in the re
 
 ## Author
 - Team Members:
-- Farzana Akter Omi
+- Farzana Akter
 - Sabrin Alom
 - Iffat Zakiha
 - Sanjana Jannat
