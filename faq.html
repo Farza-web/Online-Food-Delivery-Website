@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hut | FAQ</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Pizza<span>Hut</span></div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="locations.html">Locations</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html" class="active">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-container">
+
+            <div class="faq">
+                <button class="faq-question">1. How long does delivery take?</button>
+                <div class="faq-answer">
+                    <p>We deliver within 30 minutes to ensure your pizza arrives hot and fresh!</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">2. Can I customize my pizza?</button>
+                <div class="faq-answer">
+                    <p>Yes! You can add or remove toppings when placing your order.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">3. What payment methods do you accept?</button>
+                <div class="faq-answer">
+                    <p>We accept cash on delivery, credit/debit cards, and online payments via mobile apps.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">4. Do you have vegetarian options?</button>
+                <div class="faq-answer">
+                    <p>Yes! We offer a variety of vegetarian pizzas and sides.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">5. Can I track my order?</button>
+                <div class="faq-answer">
+                    <p>Yes, you can track your order status online using our website or app.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const faqButtons = document.querySelectorAll('.faq-question');
+
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const answer = button.nextElementSibling;
+                if(answer.style.maxHeight){
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
