@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hut | Order</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-area">
+            <img class="logo-img" src="Pizza-Hut-Logo.jpg" alt="Pizza Hut Logo">
+            <h1 class="logo">Pizza<span>Hut</span></h1>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="locations.html">Locations</a>
+            <a href="contact.html">Contact</a>
+            <a class="active" href="order.html">Order</a>
+        </nav>
+    </header>
+
+    <!-- Order Section -->
+    <section class="order-section">
+        <h2 class="order-title">Place Your Order</h2>
+        <p class="order-subtitle">Select your favorite items and fill your details below.</p>
+
+        <div class="order-container">
+
+            <!-- Order Form -->
+            <div class="order-form">
+                <form action="#" method="post">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" placeholder="Your Address" rows="4" required></textarea>
+
+                    <label for="item">Select Item</label>
+                    <select id="item" name="item" required>
+                        <option value="">--Choose an item--</option>
+                        <option value="pepperoni">Pepperoni Pizza -৳ 950 BDT</option>
+                        <option value="margherita">Margherita Pizza -৳ 1242 BDT</option>
+                        <option value="bbq">BBQ Chicken Pizza - ৳ 850 BDT</option>
+                        <option value="cheeseburger">Double Cheese Burger - ৳ 400 BDT</option>
+                        <option value="chickenburger">Chicken Burger -৳ 200 BDT</option>
+                        <option value="veggieburger">Veggie Burger -৳ 220 BDT</option>
+                        <option value="fries">French Fries - ৳ 100 BDT</option>
+                        <option value="coke">Coca-Cola - $1.99</option>
+                    </select>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        <!-- 🔴 PAYMENT METHOD SECTION -->
+        <label>Payment Method</label>
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment" value="cod" required>
+                Cash on Delivery
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="bkash">bKash </label>
+
+            <label>
+                <input type="radio" name="payment" value="nagad">Nagad</label>
+
+            <label>
+                <input type="radio" name="payment" value="card"> Credit / Debit Card </label>
+        </div>
+
+        <!-- Card Details (Optional / Can be hidden using JS) -->
+        <div id="card-details" style="display:none;">
+            <label>Card Number</label>
+            <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+            <label>Expiry Date</label>
+            <input type="month">
+
+            <label>CVV</label>
+            <input type="password" placeholder="123">
+        </div>
+
+
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>Your Order Summary</h3>
+                <p>Select items and fill the form to see summary here.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Link JS at the end of body -->
+    <script src="order.js"></script>
+</body>
+</html>
