@@ -1,0 +1,181 @@
+/* Base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: #1a1a1a;
+    flex-wrap: wrap;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 90px;
+    border-radius: 50%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff0000;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #ff0000;
+}
+
+/* Deals Section */
+.deals-section {
+    padding: 50px 6%;
+    text-align: center;
+}
+
+.deals-title {
+    font-size: 38px;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.deals-subtitle {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+/* Deals Grid */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Deal Card */
+.deal-card {
+    background: #1f1f1f;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.deal-card:hover {
+    transform: translateY(-8px);
+    background: #262626;
+}
+
+.deal-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.deal-card p {
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Price Badge */
+.deal-price {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 16px;
+    background: #ff0000;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Deal Actions (FIXED TYPO + RESPONSIVE) */
+.deal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Buttons */
+.deal-btn {
+    text-decoration: none;
+    color: #fff;
+    background: #ff0000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+    white-space: normal;
+    box-sizing: border-box; /* ⭐ FIX */
+}
+
+
+.deal-btn:hover {
+    background: #e60000;
+}
+
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav a {
+        margin: 10px;
+    }
+
+    .deals-title {
+        font-size: 30px;
+    }
+
+    .deal-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        width: 70px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .deals-title {
+        font-size: 26px;
+    }
+}
