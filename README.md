@@ -60,7 +60,7 @@ Each team member contributed code through commits, which can be viewed in the re
 - Team Members:
 - Farzana Akter
 - Sabrin Alom
-- Iffat Zakiha
+- Iffat Zakiah
 - Sanjana Jannat
 - Isita Akter
 
